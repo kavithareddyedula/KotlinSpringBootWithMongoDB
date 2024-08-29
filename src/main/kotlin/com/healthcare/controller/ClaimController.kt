@@ -17,7 +17,7 @@ class ClaimController(val service: ClaimService) {
     @PostMapping(value= arrayOf("create"),consumes = [MediaType.APPLICATION_JSON_VALUE])
     fun creatAClaim(@RequestBody claim: Claim): ResponseEntity<Claim> {
         var claimLocal =
-            service.creatAClaim(claim)  /// insert SQL query will be created automatically by CRUD operations intervface
+            service.creatAClaim(claim)  /// insert SQL query will be created automatically by CRUDRepository/mongodb/JPA operations intervface
         return ResponseEntity<Claim>(claimLocal, HttpStatus.OK)
     }
 

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface ClaimRepository:MongoRepository<Claim,String>  {
-    //  HQL --> auto genared
-    // save === insert
-    // find == get
+    //  HQL --> auto generated
+    // custom queries
 }
